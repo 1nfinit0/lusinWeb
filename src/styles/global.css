@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease,
+      border-color 0.4s ease,
+      fill 0.4s ease,
+      stroke 0.4s ease;
+  }
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-feature: var(--text-feature);
+  --color-gost: var(--gost);
+  --color-gost-hover: var(--gost-hover);
+}
+
+:root {
+
+  /* Base */
+  --primary: #B31217;
+  --secondary: #D4A24C;
+
+  /* Texto */
+  --text: #F8F4EC;
+  --text-secondary: #D9CFC1;
+  --text-feature: #F5C86B;
+
+  /* Gradiente principal elegante */
+  --gradient-main: linear-gradient(
+    180deg,
+    #D71B1B 0%,
+    #8B0E12 100%
+  );
+
+  /* Ghost / superficies suaves */
+  --gost: rgba(255, 240, 220, 0.08);
+  --gost-hover: rgba(255, 215, 160, 0.14);
+}
+
+.theme-dark {
+  
+  --primary: #FFFFFF; 
+  --secondary: #d4e6f7;
+  --text: #05121e;
+  --text-secondary: #7C7C7C;
+  --text-feature: #1F68AD;
+  --gradient-main: linear-gradient(180deg, #a8cdf0, #e9f3fb);
+  --gost: #F5F5F5;
+  --gost-hover: #EEEEEE;
+
+}
+
+/* SCROLLBAR */
+/* Chrome / Edge / Safari */
+.product-row::-webkit-scrollbar {
+  height: 10px;
+}
+
+.product-row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.product-row::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: 999px;
+  transition: background 0.3s;
+}
+
+.product-row::-webkit-scrollbar-thumb:hover {
+  background: #e7e7e7;
+}
+
+
+/* Firefox */
+.product-row {
+  scrollbar-width: thin;
+  scrollbar-color: #e2e2e29c transparent;
+}
+.product-row:hover {
+  scrollbar-color: #ebebeb transparent;
+}
+
+.spec-card {
+  @apply relative flex flex-col items-center justify-between gap-1 p-4
+  w-40 h-36
+  rounded-2xl
+  bg-secondary backdrop-blur-md
+  border border-white/10
+  transition-all duration-300 ease-in-out
+  hover:bg-white/10 hover:border-white/20
+  hover:scale-[1.02]
+  hover:shadow-lg;
+}
+
+.spec-card img {
+  @apply w-8 h-8 mb-1 filter invert;
+}
+
+.spec-card .label {
+  @apply text-xs text-text-feature uppercase tracking-wide;
+}
+
+.spec-card .value {
+  @apply text-sm font-medium text-text leading-snug text-center;
+}
