@@ -45,8 +45,8 @@
 }
 
 .theme-dark {
-  
-  --primary: #FFFFFF; 
+
+  --primary: #FFFFFF;
   --secondary: #d4e6f7;
   --text: #05121e;
   --text-secondary: #7C7C7C;
@@ -55,6 +55,10 @@
   --gost: #F5F5F5;
   --gost-hover: #EEEEEE;
 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* SCROLLBAR */

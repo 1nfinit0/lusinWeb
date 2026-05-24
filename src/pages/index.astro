@@ -4,6 +4,8 @@ import Header from '@components/Header.astro';
 import Hero from '@components/Hero.astro';
 import News from '@components/News.astro';
 import About from '@components/About.astro';
+import Sedes from '@components/Sedes.astro';
+import Contacto from '@components/Contacto.astro';
 ---
 
 <Layout>
@@ -15,8 +17,23 @@ import About from '@components/About.astro';
 		<div class="w-full max-w-5xl px-4 py-8 ">
 			<News />
 		</div>
-		<div class="w-full max-w-5xl px-4 py-8 ">
+		<div class="w-full bg-linear-to-r from-rose-800 via-red-600 to-red-800 flex justify-center">
+			<div class="w-full max-w-5xl px-4 py-8 ">
 			<About />
 		</div>
+		</div>
+		<div id="sedes" class="w-full max-w-5xl px-4 py-8 ">
+			<Sedes />
+		</div>
+		<div class="w-full bg-linear-to-r from-rose-800 via-red-600 to-red-800 flex justify-center">
+			<div class="w-full max-w-5xl px-4 py-8 ">
+			<Contacto />
+		</div>
+		</div>
 	</main>
+	<footer class="w-full flex justify-center py-6 bg-white">
+		<div class="w-full max-w-5xl px-4 py-8 text-center text-sm text-black/80">
+			&copy; 2026 LU SIN. Departamento de Ciencia y Tecnología.
+		</div>
+	</footer>
 </Layout>
